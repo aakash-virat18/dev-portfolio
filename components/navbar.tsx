@@ -43,21 +43,18 @@ export function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 w-full z-50 bg-[#1e1e1e]/90 backdrop-blur-md border-b border-gray-800">
+      className="fixed top-0 w-full z-50 bg-[#1e1e1e]/90 backdrop-blur-md border-b border-gray-800"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <Code2 className="h-8 w-8 text-[#3051ff]" />
-            <span className="text-xl font-bold">Portfolio</span>
-          </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-[#e5e5e5] hover:text-[#3051ff] transition-colors duration-200 flex items-center space-x-1 cursor-pointer">
+                className="text-[#e5e5e5] hover:text-[#14B8A6] transition-colors duration-200 flex items-center space-x-1 cursor-pointer"
+              >
                 <item.icon className="h-4 w-4" />
                 <span>{item.name}</span>
               </button>
@@ -80,7 +77,8 @@ export function Navbar() {
                       scrollToSection(item.href);
                       setIsOpen(false);
                     }}
-                    className="text-[#e5e5e5] hover:text-[#3051ff] transition-colors duration-200 flex items-center space-x-2 p-2 cursor-pointer text-left">
+                    className="text-[#e5e5e5] hover:text-[#14B8A6] transition-colors duration-200 flex items-center space-x-2 p-2 cursor-pointer text-left"
+                  >
                     <item.icon className="h-5 w-5" />
                     <span>{item.name}</span>
                   </button>

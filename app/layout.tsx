@@ -7,37 +7,24 @@ import { Footer } from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MERN Stack Developer | Frontend Specialist",
+  title: "Aakash Yadav",
   description:
-    "Professional MERN Stack Developer specializing in Frontend Development, Shopify, WordPress, and 2D/3D Animations. Building high-performance websites that inspire.",
+    "This is the portfolio of Aakash Yadav, a Software Engineer",
   keywords:
-    "MERN Stack Developer, React Developer, Node.js, MongoDB, Shopify Developer, WordPress Developer, Frontend Developer, Full Stack Developer",
-  authors: [{ name: "Portfolio" }],
-  openGraph: {
-    title: "MERN Stack Developer",
-    description:
-      "Professional MERN Stack Developer specializing in Frontend Development, Shopify, WordPress, and 2D/3D Animations.",
-    url: "https://usmansajid.dev",
-    siteName: "Portfolio",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "MERN Stack Developer",
-      },
+    "React developer, Frontend Developer, Software Engineer",
+  authors: [{ name: "Aakash Yadav" }],
+  icons: {
+    icon: [
+      { url: '/code.png' },
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
-    locale: "en_US",
-    type: "website",
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/code.png',
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "MERN Stack Developer",
-    description:
-      "Professional MERN Stack Developer specializing in Frontend Development, Shopify, WordPress, and 2D/3D Animations.",
-    images: ["/og-image.jpg"],
-  },
-  generator: "v0.dev",
 };
 
 export default function RootLayout({

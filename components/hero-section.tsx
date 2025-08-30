@@ -29,7 +29,7 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}>
-            Hi, I'm <span className="text-[#3051ff]">Software Engineer</span>
+            Hi, I'm <span className="text-[#14B8A6]">Software Engineer</span>
           </motion.h1>
 
           <motion.h2
