@@ -122,13 +122,13 @@ export default function BlogDetailPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}>
             <Link href="/blog">
-              <Button variant="ghost" className="mb-8 hover:text-[#3051ff]">
+              <Button variant="ghost" className="mb-8 hover:text-[#14B8A6]">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Blog
               </Button>
             </Link>
 
-            <Badge className="bg-[#3051ff]/20 text-[#3051ff] mb-4">
+            <Badge className="bg-[#14B8A6]/20 text-[#14B8A6] mb-4">
               {post.category}
             </Badge>
 
@@ -189,7 +189,7 @@ export default function BlogDetailPage() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="lg:col-span-3">
               <div
-                className="prose prose-invert prose-lg max-w-none prose-headings:text-[#e5e5e5] prose-p:text-gray-300 prose-strong:text-[#e5e5e5] prose-code:text-[#3051ff] prose-pre:bg-gray-800"
+                className="prose prose-invert prose-lg max-w-none prose-headings:text-[#e5e5e5] prose-p:text-gray-300 prose-strong:text-[#e5e5e5] prose-code:text-[#14B8A6] prose-pre:bg-gray-800"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
 
@@ -199,7 +199,7 @@ export default function BlogDetailPage() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="border-[#3051ff] text-[#3051ff] hover:bg-[#3051ff] hover:text-white">
+                    className="border-[#14B8A6] text-[#14B8A6] hover:bg-[#14B8A6] hover:text-white">
                     <Share2 className="h-4 w-4 mr-2" />
                     Share
                   </Button>
@@ -221,22 +221,22 @@ export default function BlogDetailPage() {
                     <nav className="space-y-2">
                       <a
                         href="#introduction"
-                        className="block text-sm text-gray-400 hover:text-[#3051ff] transition-colors">
+                        className="block text-sm text-gray-400 hover:text-[#14B8A6] transition-colors">
                         Introduction
                       </a>
                       <a
                         href="#best-practices"
-                        className="block text-sm text-gray-400 hover:text-[#3051ff] transition-colors">
+                        className="block text-sm text-gray-400 hover:text-[#14B8A6] transition-colors">
                         Best Practices
                       </a>
                       <a
                         href="#performance"
-                        className="block text-sm text-gray-400 hover:text-[#3051ff] transition-colors">
+                        className="block text-sm text-gray-400 hover:text-[#14B8A6] transition-colors">
                         Performance Tips
                       </a>
                       <a
                         href="#conclusion"
-                        className="block text-sm text-gray-400 hover:text-[#3051ff] transition-colors">
+                        className="block text-sm text-gray-400 hover:text-[#14B8A6] transition-colors">
                         Conclusion
                       </a>
                     </nav>
@@ -248,7 +248,7 @@ export default function BlogDetailPage() {
                   <CardContent className="p-6">
                     <h4 className="font-semibold mb-4">About the Author</h4>
                     <div className="flex items-center space-x-3 mb-3">
-                      <div className="w-12 h-12 bg-[#3051ff] rounded-full flex items-center justify-center">
+                      <div className="w-12 h-12 bg-[#14B8A6] rounded-full flex items-center justify-center">
                         <span className="text-white font-bold">US</span>
                       </div>
                       <div>
@@ -303,13 +303,13 @@ export default function BlogDetailPage() {
                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                       <div className="absolute top-4 left-4">
-                        <Badge className="bg-[#3051ff]/90 text-white">
+                        <Badge className="bg-[#14B8A6]/90 text-white">
                           {relatedPost.category}
                         </Badge>
                       </div>
                     </div>
                     <CardContent className="p-6">
-                      <h4 className="text-lg font-semibold mb-2 group-hover:text-[#3051ff] transition-colors duration-300">
+                      <h4 className="text-lg font-semibold mb-2 group-hover:text-[#14B8A6] transition-colors duration-300">
                         {relatedPost.title}
                       </h4>
                       <div className="flex items-center text-sm text-gray-400">

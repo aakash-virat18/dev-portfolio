@@ -72,7 +72,7 @@ export function TestimonialsSection() {
             ease: "linear" 
           }}
         >
-          <Quote className="absolute top-20 left-10 h-32 w-32 text-[#3051ff]" />
+          <Quote className="absolute top-20 left-10 h-32 w-32 text-[#14B8A6]" />
         </motion.div>
         <motion.div
           animate={{ 
@@ -85,7 +85,7 @@ export function TestimonialsSection() {
             ease: "linear" 
           }}
         >
-          <Quote className="absolute bottom-20 right-10 h-24 w-24 text-[#3051ff]" />
+          <Quote className="absolute bottom-20 right-10 h-24 w-24 text-[#14B8A6]" />
         </motion.div>
       </div>
 
@@ -114,7 +114,7 @@ export function TestimonialsSection() {
               whileHover={{ y: -10, scale: 1.02 }}
             >
               <Card className="bg-gray-800/50 border-gray-700 h-full hover:bg-gray-800/70 transition-all duration-300 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#3051ff] to-purple-500"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#14B8A6] to-purple-500"></div>
                 <CardContent className="p-6">
                   <motion.div
                     className="flex items-center space-x-1 mb-4"
@@ -135,7 +135,7 @@ export function TestimonialsSection() {
                   </motion.div>
                   
                   <blockquote className="text-gray-300 mb-6 italic relative">
-                    <Quote className="absolute -top-2 -left-2 h-6 w-6 text-[#3051ff] opacity-50" />
+                    <Quote className="absolute -top-2 -left-2 h-6 w-6 text-[#14B8A6] opacity-50" />
                     "{testimonial.quote}"
                   </blockquote>
                   
@@ -147,7 +147,7 @@ export function TestimonialsSection() {
                     <div>
                       <div className="font-semibold">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}</div>
-                      <div className="text-sm text-[#3051ff]">{testimonial.location}</div>
+                      <div className="text-sm text-[#14B8A6]">{testimonial.location}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -170,7 +170,7 @@ export function TestimonialsSection() {
           >
             <a
               href="#contact"
-              className="inline-block bg-[#3051ff] hover:bg-[#2041df] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300"
+              className="inline-block bg-[#14B8A6] hover:bg-[#2041df] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300"
             >
               Let's Work Together
             </a>

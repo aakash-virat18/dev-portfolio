@@ -118,7 +118,7 @@ export function ProjectsSection() {
               onClick={() => setSelectedCategory(category)}
               className={`rounded-2xl transition-all duration-300 ${
                 category === selectedCategory 
-                  ? "bg-[#3051ff] hover:bg-[#2041df] scale-105" 
+                  ? "bg-[#14B8A6] hover:bg-[#2041df] scale-105" 
                   : "border-gray-600 hover:bg-gray-700 hover:scale-105"
               }`}
             >
@@ -133,7 +133,7 @@ export function ProjectsSection() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-8"
           >
-            <Badge variant="outline" className="border-[#3051ff] text-[#3051ff] text-sm px-4 py-2">
+            <Badge variant="outline" className="border-[#14B8A6] text-[#14B8A6] text-sm px-4 py-2">
               Filtered by: {selectedTag}
               <button 
                 onClick={() => setSelectedTag(null)}
@@ -166,7 +166,7 @@ export function ProjectsSection() {
                   />
                   <div className="absolute top-4 left-4">
                     <Badge 
-                      className="bg-[#3051ff]/90 text-white cursor-pointer hover:bg-[#3051ff]"
+                      className="bg-[#14B8A6]/90 text-white cursor-pointer hover:bg-[#14B8A6]"
                       onClick={() => setSelectedCategory(project.category)}
                     >
                       {project.category}
@@ -202,7 +202,7 @@ export function ProjectsSection() {
                         key={tagIndex} 
                         variant="outline" 
                         className={`border-gray-600 text-xs cursor-pointer transition-all duration-300 ${
-                          selectedTag === tag ? 'border-[#3051ff] text-[#3051ff]' : 'hover:border-[#3051ff] hover:text-[#3051ff]'
+                          selectedTag === tag ? 'border-[#14B8A6] text-[#14B8A6]' : 'hover:border-[#14B8A6] hover:text-[#14B8A6]'
                         }`}
                         onClick={() => handleTagClick(tag)}
                       >
@@ -211,7 +211,7 @@ export function ProjectsSection() {
                     ))}
                   </div>
                   <Link href={`/projects/${project.id}`}>
-                    <Button className="w-full bg-[#3051ff] hover:bg-[#2041df] transition-all duration-300 hover:scale-105">
+                    <Button className="w-full bg-[#14B8A6] hover:bg-[#2041df] transition-all duration-300 hover:scale-105">
                       View Project
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -230,7 +230,7 @@ export function ProjectsSection() {
           className="text-center"
         >
           <Link href="/projects">
-            <Button size="lg" className="bg-[#3051ff] hover:bg-[#2041df] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-105">
+            <Button size="lg" className="bg-[#14B8A6] hover:bg-[#2041df] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-105">
               View All Projects
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

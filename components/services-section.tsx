@@ -13,7 +13,7 @@ const services = [
     title: "MERN Stack Development",
     description: "Full-stack web applications with React, Node.js, Express, and MongoDB. Scalable, secure, and performant solutions.",
     features: ["Custom Web Apps", "API Development", "Database Design", "Authentication Systems"],
-    color: "#3051ff"
+    color: "#14B8A6"
   },
   {
     id: "shopify",
@@ -122,7 +122,7 @@ export function ServicesSection() {
                   <Link href={`/services/${service.id}`}>
                     <Button 
                       variant="outline" 
-                      className="w-full border-gray-600 hover:bg-gray-700 group-hover:border-[#3051ff] transition-all duration-300"
+                      className="w-full border-gray-600 hover:bg-gray-700 group-hover:border-[#14B8A6] transition-all duration-300"
                     >
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />

@@ -228,7 +228,7 @@ export default function ServiceDetailPage() {
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#3051ff] rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#14B8A6] rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -238,7 +238,7 @@ export default function ServiceDetailPage() {
             transition={{ duration: 0.8 }}
           >
             <Link href="/#services">
-              <Button variant="ghost" className="mb-8 hover:text-[#3051ff]">
+              <Button variant="ghost" className="mb-8 hover:text-[#14B8A6]">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Services
               </Button>
@@ -251,13 +251,13 @@ export default function ServiceDetailPage() {
                 
                 <div className="flex flex-wrap gap-2 mb-8">
                   {service.technologies.map((tech, index) => (
-                    <Badge key={index} variant="outline" className="border-[#3051ff] text-[#3051ff]">
+                    <Badge key={index} variant="outline" className="border-[#14B8A6] text-[#14B8A6]">
                       {tech}
                     </Badge>
                   ))}
                 </div>
                 
-                <Button size="lg" className="bg-[#3051ff] hover:bg-[#2041df]">
+                <Button size="lg" className="bg-[#14B8A6] hover:bg-[#2041df]">
                   Get Started
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -303,7 +303,7 @@ export default function ServiceDetailPage() {
               >
                 <Card className="bg-gray-800/50 border-gray-700 h-full">
                   <CardContent className="p-6">
-                    <Check className="h-6 w-6 text-[#3051ff] mb-3" />
+                    <Check className="h-6 w-6 text-[#14B8A6] mb-3" />
                     <p className="font-medium">{feature}</p>
                   </CardContent>
                 </Card>
@@ -337,21 +337,21 @@ export default function ServiceDetailPage() {
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
               >
-                <Card className={`bg-gray-800/50 border-gray-700 h-full ${index === 1 ? 'border-[#3051ff] scale-105' : ''}`}>
+                <Card className={`bg-gray-800/50 border-gray-700 h-full ${index === 1 ? 'border-[#14B8A6] scale-105' : ''}`}>
                   <CardHeader>
                     <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                    <div className="text-3xl font-bold text-[#3051ff]">{pkg.price}</div>
+                    <div className="text-3xl font-bold text-[#14B8A6]">{pkg.price}</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3 mb-6">
                       {pkg.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
-                          <Check className="h-4 w-4 text-[#3051ff] mr-3" />
+                          <Check className="h-4 w-4 text-[#14B8A6] mr-3" />
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    <Button className={`w-full ${index === 1 ? 'bg-[#3051ff] hover:bg-[#2041df]' : 'variant-outline border-[#3051ff] text-[#3051ff] hover:bg-[#3051ff] hover:text-white'}`}>
+                    <Button className={`w-full ${index === 1 ? 'bg-[#14B8A6] hover:bg-[#2041df]' : 'variant-outline border-[#14B8A6] text-[#14B8A6] hover:bg-[#14B8A6] hover:text-white'}`}>
                       Choose {pkg.name}
                     </Button>
                   </CardContent>

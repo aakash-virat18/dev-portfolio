@@ -14,7 +14,7 @@ export function HeroSection() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#3051ff] rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#14B8A6] rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
         <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000"></div>
         <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000"></div>
       </div>
@@ -29,7 +29,7 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}>
-            Hi, I'm <span className="text-[#14B8A6]">Software Engineer</span>
+            Hi, I'm <span className="text-[#14B8A6]">Aakash</span>
           </motion.h1>
 
           <motion.h2
@@ -37,7 +37,7 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}>
-            MERN Stack Software Engineer
+            Software Engineer
           </motion.h2>
 
           <motion.div
@@ -45,9 +45,9 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}>
-            <Calendar className="h-5 w-5 text-[#3051ff]" />
-            <span className="text-lg font-semibold text-[#3051ff]">
-              2.5 Years of Experience
+            <Calendar className="h-5 w-5 text-[#14B8A6]" />
+            <span className="text-lg font-semibold text-[#14B8A6]">
+              3+ Years of Experience
             </span>
           </motion.div>
 
@@ -57,8 +57,7 @@ export function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}>
             I craft high-performance websites that inspire. Specialized in
-            Full-Stack Development, Shopify, WordPress, and stunning 2D/3D
-            animations.
+            React.js, Next.js, Node.js and UI libraries.
           </motion.p>
 
           <motion.div
@@ -73,7 +72,7 @@ export function HeroSection() {
                   .getElementById("projects")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="bg-[#3051ff] hover:bg-[#2041df] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-105">
+              className="bg-[#14B8A6] hover:bg-[#14B8A6] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-105">
               View Projects
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -81,7 +80,7 @@ export function HeroSection() {
               variant="outline"
               size="lg"
               onClick={scrollToContact}
-              className="border-[#3051ff] text-[#3051ff] hover:bg-[#3051ff] hover:text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-105">
+              className="border-[#14B8A6] text-[#14B8A6] hover:bg-[#14B8A6] hover:text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-105">
               <Mail className="mr-2 h-5 w-5" />
               Contact Me
             </Button>
@@ -94,21 +93,21 @@ export function HeroSection() {
             transition={{ delay: 1, duration: 0.8 }}>
             <motion.a
               href="#"
-              className="text-gray-400 hover:text-[#3051ff] transition-colors duration-300"
+              className="text-gray-400 hover:text-[#14B8A6] transition-colors duration-300"
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}>
               <Github className="h-6 w-6" />
             </motion.a>
             <motion.a
               href="#"
-              className="text-gray-400 hover:text-[#3051ff] transition-colors duration-300"
+              className="text-gray-400 hover:text-[#14B8A6] transition-colors duration-300"
               whileHover={{ scale: 1.2, rotate: -5 }}
               whileTap={{ scale: 0.9 }}>
               <Linkedin className="h-6 w-6" />
             </motion.a>
             <motion.a
               href="#"
-              className="text-gray-400 hover:text-[#3051ff] transition-colors duration-300"
+              className="text-gray-400 hover:text-[#14B8A6] transition-colors duration-300"
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}>
               <Mail className="h-6 w-6" />

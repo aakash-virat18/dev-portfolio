@@ -19,10 +19,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navItems = [
   { name: "About", href: "#about", icon: User },
-  { name: "Services", href: "#services", icon: Briefcase },
+  // { name: "Services", href: "#services", icon: Briefcase },
   { name: "Projects", href: "#projects", icon: FolderOpen },
   { name: "Stacks", href: "#stacks", icon: Layers },
-  { name: "Blog", href: "#blog", icon: BookOpen },
+  // { name: "Blog", href: "#blog", icon: BookOpen },
   { name: "Contact", href: "#contact", icon: Mail },
 ];
 
@@ -46,9 +46,9 @@ export function Navbar() {
       className="fixed top-0 w-full z-50 bg-[#1e1e1e]/90 backdrop-blur-md border-b border-gray-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-center items-center h-16">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-12">
             {navItems.map((item) => (
               <button
                 key={item.name}

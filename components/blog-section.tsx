@@ -148,13 +148,13 @@ export function BlogSection() {
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
-                      <Badge className="bg-[#3051ff] text-white">
+                      <Badge className="bg-[#14B8A6] text-white">
                         {post.category}
                       </Badge>
                     </div>
                   </div>
                   <CardContent className="p-6 flex flex-col h-full">
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-[#3051ff] transition-colors duration-300">
+                    <h3 className="text-xl font-semibold mb-3 group-hover:text-[#14B8A6] transition-colors duration-300">
                       {post.title}
                     </h3>
                     <p className="text-gray-400 mb-4 flex-grow">{post.excerpt}</p>
@@ -195,7 +195,7 @@ export function BlogSection() {
           className="text-center"
         >
           <Link href="/blog">
-            <Button size="lg" className="bg-[#3051ff] hover:bg-[#2041df] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-105">
+            <Button size="lg" className="bg-[#14B8A6] hover:bg-[#2041df] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-105">
               View All Posts
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

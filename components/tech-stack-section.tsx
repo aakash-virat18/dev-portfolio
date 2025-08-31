@@ -11,101 +11,30 @@ type Tech = {
 }
 
 type TechCategory = {
-  category: string
   color: string
   technologies: Tech[]
 }
 
 const techStacks: TechCategory[] = [
   {
-    category: "Frontend",
     color: "#3051ff",
     technologies: [
       { name: "React.js", icon: "/icons/react.svg", color: "#61DAFB" },
-      { name: "Next.js", icon: "/icons/nextjs.svg", color: "#000000" },
+      { name: "Next.js", icon: "/icons/nextjs2.svg", color: "#000000" },
       { name: "TypeScript", icon: "/icons/typescript.svg", color: "#3178C6" },
       { name: "JavaScript", icon: "/icons/javascript.svg", color: "#F7DF1E" },
       { name: "HTML5", icon: "/icons/html5.svg", color: "#E34F26" },
       { name: "CSS3", icon: "/icons/css3.svg", color: "#1572B6" },
-      { name: "Tailwind CSS", icon: "/icons/tailwindcss.svg", color: "#06B6D4" },
-      { name: "Sass", icon: "/icons/sass.svg", color: "#CC6699" }
-    ]
-  },
-  {
-    category: "Backend & Database",
-    color: "#339933",
-    technologies: [
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg", color: "#06B6D4" },
       { name: "Node.js", icon: "/icons/nodejs.svg", color: "#339933" },
       { name: "Express.js", icon: "/icons/express.svg", color: "#000000" },
       { name: "MongoDB", icon: "/icons/mongodb.svg", color: "#47A248" },
-      { name: "PostgreSQL", icon: "/icons/postgresql.svg", color: "#336791" },
       { name: "MySQL", icon: "/icons/mysql.svg", color: "#4479A1" },
-      { name: "Firebase", icon: "/icons/firebase.svg", color: "#FFCA28" },
-      { name: "REST APIs", icon: "/icons/rest-api.svg", color: "#FF6B35" },
-      { name: "GraphQL", icon: "/icons/graphql.svg", color: "#E10098" }
-    ]
-  },
-  {
-    category: "State Management & Tools",
-    color: "#764ABC",
-    technologies: [
+      { name: "REST APIs", icon: "/icons/restapi.svg", color: "#FF6B35" },
       { name: "Redux Toolkit", icon: "/icons/redux.svg", color: "#764ABC" },
       { name: "JWT", icon: "/icons/jwt.svg", color: "#000000" },
-      { name: "Socket.io", icon: "/icons/socketio.svg", color: "#010101" },
-      { name: "Stripe", icon: "/icons/stripe.svg", color: "#635BFF" },
-      { name: "Webpack", icon: "/icons/webpack.svg", color: "#8DD6F9" },
       { name: "ESLint", icon: "/icons/eslint.svg", color: "#4B32C3" },
-      { name: "Prettier", icon: "/icons/prettier.png", color: "#F7B93E" } // PNG example
-    ]
-  },
-  {
-    category: "Animations & 3D",
-    color: "#FF0055",
-    technologies: [
-      { name: "Framer Motion", icon: "/icons/framer.svg", color: "#FF0055" },
-      { name: "Three.js", icon: "/icons/threejs.svg", color: "#000000" },
-      { name: "GSAP", icon: "/icons/gsap.svg", color: "#88CE02" },
-      { name: "Lottie", icon: "/icons/lottie.svg", color: "#00D4FF" },
-      { name: "Blender", icon: "/icons/blender.svg", color: "#F5792A" },
-      { name: "Photoshop", icon: "/icons/photoshop.svg", color: "#31A8FF" },
-      { name: "Illustrator", icon: "/icons/illustrator.svg", color: "#FF9A00" }
-    ]
-  },
-  {
-    category: "CMS & E-commerce",
-    color: "#21759B",
-    technologies: [
-      { name: "WordPress", icon: "/icons/wordpress.svg", color: "#21759B" },
-      { name: "Shopify", icon: "/icons/shopify.svg", color: "#7AB55C" },
-      { name: "WooCommerce", icon: "/icons/woocommerce.svg", color: "#96588A" },
-      { name: "Elementor", icon: "/icons/elementor.svg", color: "#D63638" },
-      { name: "Liquid", icon: "/icons/liquid.svg", color: "#7AB55C" },
-      { name: "PHP", icon: "/icons/php.svg", color: "#777BB4" }
-    ]
-  },
-  {
-    category: "Microsoft Office & Productivity",
-    color: "#217346",
-    technologies: [
-      { name: "Excel Advanced", icon: "/icons/excel.svg", color: "#217346" },
-      { name: "VBA Macros", icon: "/icons/vba.svg", color: "#0078D4" },
-      { name: "Power Query", icon: "/icons/powerquery.svg", color: "#F2C811" },
-      { name: "Pivot Tables", icon: "/icons/pivottables.svg", color: "#217346" },
-      { name: "PowerPoint", icon: "/icons/powerpoint.svg", color: "#B7472A" },
-      { name: "Word", icon: "/icons/word.svg", color: "#2B579A" }
-    ]
-  },
-  {
-    category: "Development Tools",
-    color: "#FF6B35",
-    technologies: [
-      { name: "Git", icon: "/icons/git.svg", color: "#F05032" },
-      { name: "GitHub", icon: "/icons/github.svg", color: "#181717" },
-      { name: "VS Code", icon: "/icons/vscode.svg", color: "#007ACC" },
       { name: "Figma", icon: "/icons/figma.svg", color: "#F24E1E" },
-      { name: "Docker", icon: "/icons/docker.svg", color: "#2496ED" },
-      { name: "Vercel", icon: "/icons/vercel.svg", color: "#000000" },
-      { name: "AWS", icon: "/icons/aws.svg", color: "#FF9900" }
     ]
   }
 ]
@@ -127,7 +56,7 @@ export function TechStackSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6 max-w-4xl mx-auto">
           {techStacks.map((stack, index) => (
             <motion.div
               key={index}
@@ -139,25 +68,12 @@ export function TechStackSection() {
               className="col-span-1"
             >
               <Card className="bg-gray-800/50 border-gray-700 h-full hover:bg-gray-800/70 transition-all duration-300 group">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center space-x-3 mb-2">
-                    <motion.div
-                      className="p-2 rounded-xl"
-                      style={{ backgroundColor: `${stack.color}20` }}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                    >
-                      <div
-                        className="w-6 h-6 rounded-lg flex items-center justify-center text-white font-bold text-sm"
-                        style={{ backgroundColor: stack.color }}
-                      >
-                        {stack.category.charAt(0)}
-                      </div>
-                    </motion.div>
-                    <h3 className="text-lg font-semibold leading-tight">{stack.category}</h3>
+                <CardHeader className="pb-0">
+                  <div className="flex items-center space-x-3">
                   </div>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                     {stack.technologies.map((tech, techIndex) => (
                       <motion.div
                         key={techIndex}
@@ -182,7 +98,7 @@ export function TechStackSection() {
                             }}
                           />
                         </div>
-                        <span className="text-xs font-medium text-center leading-tight group-hover/tech:text-[#3051ff] transition-colors duration-300">
+                        <span className="text-xs font-medium text-center leading-tight group-hover/tech:text-[#14B8A6] transition-colors duration-300">
                           {tech.name}
                         </span>
                       </motion.div>

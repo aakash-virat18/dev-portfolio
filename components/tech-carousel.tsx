@@ -1,21 +1,23 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code2, Database, Palette, Smartphone, Globe, Zap, Layers, FileText } from 'lucide-react'
+import { Code2, Database, Palette, Smartphone, Globe, Zap, Layers, FileText, ChartScatter, TestTube, Map, Library } from 'lucide-react'
 
 const techStack = [
   { name: "React.js", icon: Code2, color: "#61DAFB" },
-  { name: "Node.js", icon: Database, color: "#339933" },
-  { name: "MongoDB", icon: Database, color: "#47A248" },
   { name: "Next.js", icon: Code2, color: "#000000" },
-  { name: "Shopify", icon: Globe, color: "#7AB55C" },
-  { name: "WordPress", icon: Globe, color: "#21759B" },
-  { name: "Framer Motion", icon: Palette, color: "#FF0055" },
+  { name: "JavaScript", icon: Code2, color: "#F7DF1E" },
+  { name: "Node.js", icon: Database, color: "#339933" },
+  { name: "Express.js", icon: Zap, color: "#000000" },
+  { name: "HighCharts", icon: ChartScatter, color: "#7AB55C" },
+  { name: "Unit Testing", icon: TestTube, color: "#FF0055" },
+  { name: "SQL", icon: Database, color: "#4479A1" },
+  { name: "Redux", icon: Globe, color: "#764ABC" },
   { name: "Tailwind CSS", icon: Palette, color: "#06B6D4" },
   { name: "TypeScript", icon: Code2, color: "#3178C6" },
-  { name: "Express.js", icon: Zap, color: "#000000" },
-  { name: "Three.js", icon: Layers, color: "#000000" },
-  { name: "Excel", icon: FileText, color: "#217346" },
+  { name: "MongoDB", icon: Database, color: "#47A248" },
+  { name: "MapBox", icon: Map, color: "#010101" },
+  { name: "UI Libraries", icon: Library, color: "#3178C6" },
 ]
 
 export function TechCarousel() {

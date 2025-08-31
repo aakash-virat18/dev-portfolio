@@ -251,7 +251,7 @@ export default function ProjectDetailPage() {
             transition={{ duration: 0.8 }}
           >
             <Link href="/#projects">
-              <Button variant="ghost" className="mb-8 hover:text-[#3051ff]">
+              <Button variant="ghost" className="mb-8 hover:text-[#14B8A6]">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Projects
               </Button>
@@ -259,7 +259,7 @@ export default function ProjectDetailPage() {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
               <div>
-                <Badge className="bg-[#3051ff]/20 text-[#3051ff] mb-4">
+                <Badge className="bg-[#14B8A6]/20 text-[#14B8A6] mb-4">
                   {project.category}
                 </Badge>
                 <h1 className="text-4xl sm:text-5xl font-bold mb-6">{project.title}</h1>
@@ -277,11 +277,11 @@ export default function ProjectDetailPage() {
                 </div>
                 
                 <div className="flex space-x-4">
-                  <Button size="lg" className="bg-[#3051ff] hover:bg-[#2041df]">
+                  <Button size="lg" className="bg-[#14B8A6] hover:bg-[#2041df]">
                     <Github className="mr-2 h-5 w-5" />
                     View Code
                   </Button>
-                  <Button variant="outline" size="lg" className="border-[#3051ff] text-[#3051ff] hover:bg-[#3051ff] hover:text-white">
+                  <Button variant="outline" size="lg" className="border-[#14B8A6] text-[#14B8A6] hover:bg-[#14B8A6] hover:text-white">
                     <ExternalLink className="mr-2 h-5 w-5" />
                     Live Demo
                   </Button>
@@ -323,7 +323,7 @@ export default function ProjectDetailPage() {
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Badge variant="outline" className="border-[#3051ff] text-[#3051ff] px-4 py-2">
+                  <Badge variant="outline" className="border-[#14B8A6] text-[#14B8A6] px-4 py-2">
                     <Tag className="h-3 w-3 mr-2" />
                     {tech}
                   </Badge>
@@ -377,7 +377,7 @@ export default function ProjectDetailPage() {
                       viewport={{ once: true }}
                       className="flex items-center space-x-3"
                     >
-                      <div className="w-2 h-2 bg-[#3051ff] rounded-full"></div>
+                      <div className="w-2 h-2 bg-[#14B8A6] rounded-full"></div>
                       <span className="text-gray-300">{feature}</span>
                     </motion.div>
                   ))}
@@ -406,8 +406,8 @@ export default function ProjectDetailPage() {
                           viewport={{ once: true }}
                           className="flex items-start space-x-3"
                         >
-                          <div className="w-6 h-6 bg-[#3051ff]/20 rounded-full flex items-center justify-center mt-0.5">
-                            <div className="w-2 h-2 bg-[#3051ff] rounded-full"></div>
+                          <div className="w-6 h-6 bg-[#14B8A6]/20 rounded-full flex items-center justify-center mt-0.5">
+                            <div className="w-2 h-2 bg-[#14B8A6] rounded-full"></div>
                           </div>
                           <span className="text-gray-300 text-sm">{result}</span>
                         </motion.div>
@@ -454,13 +454,13 @@ export default function ProjectDetailPage() {
                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                       <div className="absolute top-4 left-4">
-                        <Badge className="bg-[#3051ff]/90 text-white">
+                        <Badge className="bg-[#14B8A6]/90 text-white">
                           {relatedProject.category}
                         </Badge>
                       </div>
                     </div>
                     <CardContent className="p-6">
-                      <h4 className="text-lg font-semibold group-hover:text-[#3051ff] transition-colors duration-300">
+                      <h4 className="text-lg font-semibold group-hover:text-[#14B8A6] transition-colors duration-300">
                         {relatedProject.title}
                       </h4>
                     </CardContent>

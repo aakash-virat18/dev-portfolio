@@ -34,11 +34,11 @@ export default function HomePage() {
     >
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <ProjectsSection />
       <TechStackSection />
-      <TestimonialsSection />
-      <BlogSection />
+      {/* <TestimonialsSection /> */}
+      {/* <BlogSection /> */}
       <ContactSection />
     </motion.main>
   )
