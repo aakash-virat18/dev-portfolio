@@ -176,7 +176,7 @@ export function ContactSection() {
                     <Button 
                       type="submit"
                       disabled={isLoading}
-                      className="w-full bg-[#14B8A6] hover:bg-[#2041df] text-white py-3 rounded-2xl font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-[#14B8A6] hover:bg-[#14B8A6] text-white py-3 rounded-2xl font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isLoading ? (
                         <>
