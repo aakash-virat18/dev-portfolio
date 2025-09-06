@@ -22,7 +22,7 @@ const navItems = [
   // { name: "Services", href: "#services", icon: Briefcase },
   { name: "Projects", href: "#projects", icon: FolderOpen },
   { name: "Stacks", href: "#stacks", icon: Layers },
-  // { name: "Blog", href: "#blog", icon: BookOpen },
+  { name: "Blog", href: "#blog", icon: BookOpen },
   { name: "Contact", href: "#contact", icon: Mail },
 ];
 

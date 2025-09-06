@@ -1,91 +1,81 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { ExternalLink, Github, ArrowRight } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const projects = [
   {
-    id: "ecommerce-platform",
-    title: "E-Commerce Platform",
-    description: "Full-stack MERN application with payment integration, admin dashboard, and real-time inventory management.",
-    image: "/modern-ecommerce-dashboard.png",
-    tags: ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
-    category: "MERN Stack Development",
-    github: "#",
-    demo: "#"
+    id: "resume-analyzer",
+    title: "AI Powered Resume Analyzer",
+    description:
+      "AI Powered Resume Analyzer that analyzes your resume and gives you a score based on your skills, experience, and education.",
+    image: "/project-images/resume.png",
+    tags: ["React", "React Router", "Tailwind CSS", "Redux", "Putter.js"],
+    // category: "MERN Stack Development",
+    github: "https://github.com/aakash-virat18/resume-analyzer",
+    demo: "https://resume-analyzer-flame.vercel.app/",
   },
   {
-    id: "shopify-theme",
-    title: "Shopify Custom Theme",
-    description: "Responsive Shopify theme with advanced product filtering, wishlist functionality, and optimized checkout flow.",
-    image: "/shopify-fashion-website.png",
-    tags: ["Liquid", "JavaScript", "SCSS", "Shopify API"],
-    category: "Shopify Development",
-    github: "#",
-    demo: "#"
+    id: "multi-user-sketch-app",
+    title: "Multi user Sketch App",
+    description:
+      "A sketch app that allows you to create and share your sketches with other users. Multiple users can sketch on the same board using web sockets.",
+    image: "/project-images/drawpad.png",
+    tags: ["React", "Next.js", "Socket.io", "Redux", "FontAwesome"],
+    // category: "Shopify Development",
+    github: "https://github.com/aakash-virat18/sketch-app",
+    demo: "https://sketch-app-lac.vercel.app/",
   },
   {
-    id: "wordpress-lms",
-    title: "WordPress LMS Platform",
-    description: "Learning Management System with course creation, student progress tracking, and payment integration.",
-    image: "/wordpress-lms.png",
-    tags: ["WordPress", "PHP", "MySQL", "Elementor"],
-    category: "WordPress Development",
-    github: "#",
-    demo: "#"
+    id: "fintech-landing-page",
+    title: "Fintech Landing Page",
+    description:
+      "A mobile responsive fintech landing page built with React and Tailwind CSS.",
+    image: "/project-images/fintech.png",
+    tags: ["React", "Tailwind CSS", "FontAwesome"],
+    github: "https://github.com/aakash-virat18/fintech-landing-page",
+    demo: "https://fintech-landing-page-seven.vercel.app/",
   },
   {
-    id: "3d-portfolio",
-    title: "3D Portfolio Website",
-    description: "Interactive 3D portfolio with Three.js animations, particle systems, and immersive user experience.",
-    image: "/3d-portfolio-website.png",
-    tags: ["Three.js", "React", "Framer Motion", "GLSL"],
-    category: "2D/3D Animations & Illustrations",
-    github: "#",
-    demo: "#"
-  },
-  {
-    id: "data-entry-project",
-    title: "Business Data Entry",
-    description: "Comprehensive data entry project for inventory management with 1000+ product entries and categorization.",
-    image: "/excel-dashboard.png",
-    tags: ["Excel", "Data Entry", "Validation", "Formatting"],
-    category: "Microsoft Office Services",
-    github: "#",
-    demo: "#"
-  },
-  {
-    id: "content-writing-portfolio",
-    title: "Content Writing Portfolio",
-    description: "Professional content writing services including blog posts, product descriptions, and marketing copy.",
-    image: "/mobile-app-interface.png",
-    tags: ["Content Writing", "SEO", "Research", "Copywriting"],
-    category: "Microsoft Office Services",
-    github: "#",
-    demo: "#"
+    id: "note-taking-app",
+    title: "Note Taking App",
+    description:
+      "A note taking app built with React and Tailwind CSS.",
+    image: "/project-images/notes.png",
+    tags: ["React", "Tailwind CSS", "FontAwesome"],
+    github: "https://github.com/aakash-virat18/Pocket-Notes",
+    demo: "https://pocket-notes-fawn.vercel.app/",
   }
-]
+];
 
-const categories = ["All", "MERN Stack Development", "Shopify Development", "WordPress Development", "2D/3D Animations & Illustrations", "Microsoft Office Services"]
+// const categories = [
+//   "All",
+//   "MERN Stack Development",
+//   "Shopify Development",
+//   "WordPress Development",
+//   "2D/3D Animations & Illustrations",
+//   "Microsoft Office Services",
+// ];
 
 export function ProjectsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All")
-  const [selectedTag, setSelectedTag] = useState<string | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
-  const filteredProjects = projects.filter(project => {
-    const categoryMatch = selectedCategory === "All" || project.category === selectedCategory
-    const tagMatch = !selectedTag || project.tags.includes(selectedTag)
-    return categoryMatch && tagMatch
-  })
+  const filteredProjects = projects.filter((project) => {
+    const categoryMatch =
+      selectedCategory === "All";
+    const tagMatch = !selectedTag || project.tags.includes(selectedTag);
+    return categoryMatch && tagMatch;
+  });
 
   const handleTagClick = (tag: string) => {
-    setSelectedTag(selectedTag === tag ? null : tag)
-  }
+    setSelectedTag(selectedTag === tag ? null : tag);
+  };
 
   return (
     <section id="projects" className="py-20 bg-gray-900/50">
@@ -97,14 +87,16 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Featured Projects</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+            Featured Projects
+          </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            A showcase of my recent work across different technologies and platforms
+            A showcase of my personal projects that I have worked on
           </p>
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -125,8 +117,8 @@ export function ProjectsSection() {
               {category}
             </Button>
           ))}
-        </motion.div>
-
+        </motion.div> */}
+        {/* 
         {selectedTag && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -143,10 +135,10 @@ export function ProjectsSection() {
               </button>
             </Badge>
           </motion.div>
-        )}
+        )} */}
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -164,65 +156,78 @@ export function ProjectsSection() {
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 left-4">
+                  {/* <div className="absolute top-4 left-4">
                     <Badge 
                       className="bg-[#14B8A6]/90 text-white cursor-pointer hover:bg-[#14B8A6]"
                       onClick={() => setSelectedCategory(project.category)}
                     >
                       {project.category}
                     </Badge>
-                  </div>
+                  </div> */}
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                     <motion.a
-                      href={project.github}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                     >
-                      <Button size="sm" variant="secondary" className="rounded-full">
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        className="rounded-full"
+                        onClick={() => window.open(project.github, "_blank")}
+                      >
                         <Github className="h-4 w-4" />
                       </Button>
                     </motion.a>
                     <motion.a
-                      href={project.demo}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                     >
-                      <Button size="sm" variant="secondary" className="rounded-full">
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        className="rounded-full"
+                        onClick={() => window.open(project.demo, "_blank")}
+                      >
                         <ExternalLink className="h-4 w-4" />
                       </Button>
                     </motion.a>
                   </div>
                 </div>
                 <CardContent className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                  <p className="text-gray-400 mb-4 flex-1">{project.description}</p>
+                  <h3 className="text-xl font-semibold mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 mb-4 flex-1">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
-                      <Badge 
-                        key={tagIndex} 
-                        variant="outline" 
+                      <Badge
+                        key={tagIndex}
+                        variant="outline"
                         className={`border-gray-600 text-xs cursor-pointer transition-all duration-300 ${
-                          selectedTag === tag ? 'border-[#14B8A6] text-[#14B8A6]' : 'hover:border-[#14B8A6] hover:text-[#14B8A6]'
+                          selectedTag === tag
+                            ? "border-[#14B8A6] text-[#14B8A6]"
+                            : "hover:border-[#14B8A6] hover:text-[#14B8A6]"
                         }`}
-                        onClick={() => handleTagClick(tag)}
                       >
                         {tag}
                       </Badge>
                     ))}
                   </div>
-                  <Link href={`/projects/${project.id}`}>
+                  {/* <Link href={`/projects/${project.id}`}>
                     <Button className="w-full bg-[#14B8A6] hover:bg-[#2041df] transition-all duration-300 hover:scale-105">
                       View Project
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
-                  </Link>
+                  </Link> */}
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -235,8 +240,8 @@ export function ProjectsSection() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
-  )
+  );
 }

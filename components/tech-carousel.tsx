@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code2, Database, Palette, Smartphone, Globe, Zap, Layers, FileText, ChartScatter, TestTube, Map, Library } from 'lucide-react'
+import { Code2, Database, Palette, Smartphone, Globe, Zap, Layers, FileText, ChartScatter, TestTube, Map, Library, Sheet, DatabaseBackup } from 'lucide-react'
 
 const techStack = [
   { name: "React.js", icon: Code2, color: "#61DAFB" },
@@ -18,6 +18,8 @@ const techStack = [
   { name: "MongoDB", icon: Database, color: "#47A248" },
   { name: "MapBox", icon: Map, color: "#010101" },
   { name: "UI Libraries", icon: Library, color: "#3178C6" },
+  { name: "Spread.js", icon: Sheet, color: "#0F200" },
+  { name: "Data Structures & Algorithms", icon: DatabaseBackup, color: "#A20D00" },
 ]
 
 export function TechCarousel() {

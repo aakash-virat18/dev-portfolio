@@ -182,18 +182,18 @@ export function ContactSection() {
                 <motion.a
                   href="#"
                   className="p-3 bg-gray-800/50 rounded-2xl hover:bg-[#14B8A6]/20 transition-colors duration-300 group"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Github className="h-6 w-6 text-gray-400 group-hover:text-[#14B8A6]" />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="p-3 bg-gray-800/50 rounded-2xl hover:bg-[#14B8A6]/20 transition-colors duration-300 group"
                   whileHover={{ scale: 1.1, rotate: -5 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Linkedin className="h-6 w-6 text-gray-400 group-hover:text-[#14B8A6]" />
+                  <Linkedin
+                    className="h-6 w-6 text-gray-400 group-hover:text-[#14B8A6]"
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/in/aakash-yadav-698b52199",
+                        "_blank"
+                      )
+                    }
+                  />
                 </motion.a>
                 <motion.a
                   href="#"
@@ -201,7 +201,12 @@ export function ContactSection() {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Twitter className="h-6 w-6 text-gray-400 group-hover:text-[#14B8A6]" />
+                  <Github
+                    className="h-6 w-6 text-gray-400 group-hover:text-[#14B8A6]"
+                    onClick={() =>
+                      window.open("https://github.com/aakash-virat18", "_blank")
+                    }
+                  />
                 </motion.a>
               </div>
             </div>

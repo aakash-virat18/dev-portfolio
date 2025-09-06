@@ -38,7 +38,7 @@ export default function HomePage() {
       <ProjectsSection />
       <TechStackSection />
       {/* <TestimonialsSection /> */}
-      {/* <BlogSection /> */}
+      <BlogSection />
       <ContactSection />
     </motion.main>
   )

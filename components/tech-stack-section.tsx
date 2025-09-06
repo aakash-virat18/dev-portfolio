@@ -119,11 +119,11 @@ export function TechStackSection() {
           className="mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-[#3051ff]/10 to-purple-500/10 rounded-2xl p-8 border border-[#3051ff]/20">
-            <h3 className="text-2xl font-bold mb-4">Full-Stack Expertise</h3>
             <p className="text-gray-400 max-w-3xl mx-auto">
-              With 2.5 years of experience, I've mastered the complete development lifecycle from
-              frontend user interfaces to backend APIs, database design, and deployment. I specialize
-              in creating scalable, performant applications with modern technologies.
+              With 3+ years of frontend development expertise, I specialize in building 
+              modern, responsive web applications using React.js and Next.js. I excel at 
+              creating intuitive user interfaces, optimizing performance, and implementing 
+              best practices for maintainable, scalable code.
             </p>
           </div>
         </motion.div>
