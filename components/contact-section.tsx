@@ -1,14 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Mail,
-  Phone,
-  MapPin,
   Send,
   Github,
   Linkedin,
-  Twitter,
+  CheckCircle,
+  AlertCircle,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,40 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 export function ContactSection() {
+  const form = useRef<HTMLFormElement>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState({ type: '', text: '' });
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setMessage({ type: '', text: '' });
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setMessage({ type: 'success', text: 'Message sent successfully! I\'ll get back to you soon.' });
+          form.current?.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          setMessage({ type: 'error', text: 'Failed to send message. Please try again.' });
+        }
+      )
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-900/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,69 +84,114 @@ export function ContactSection() {
                 <CardTitle className="text-2xl">Send Me a Message</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <motion.div
-                    className="space-y-2"
-                    whileFocus={{ scale: 1.02 }}
-                  >
-                    <Label htmlFor="firstName">First Name</Label>
+                <form ref={form} onSubmit={sendEmail} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <motion.div
+                      className="space-y-2"
+                      whileFocus={{ scale: 1.02 }}
+                    >
+                      <Label htmlFor="firstName">First Name</Label>
+                      <Input
+                        id="firstName"
+                        name="firstName"
+                        placeholder="John"
+                        required
+                        className="bg-gray-700/50 border-gray-600 focus:border-[#14B8A6] transition-all duration-300"
+                      />
+                    </motion.div>
+                    <motion.div
+                      className="space-y-2"
+                      whileFocus={{ scale: 1.02 }}
+                    >
+                      <Label htmlFor="lastName">Last Name</Label>
+                      <Input
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Doe"
+                        required
+                        className="bg-gray-700/50 border-gray-600 focus:border-[#14B8A6] transition-all duration-300"
+                      />
+                    </motion.div>
+                  </div>
+
+                  <motion.div className="space-y-2" whileFocus={{ scale: 1.02 }}>
+                    <Label htmlFor="email">Email</Label>
                     <Input
-                      id="firstName"
-                      placeholder="John"
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="john@example.com"
+                      required
                       className="bg-gray-700/50 border-gray-600 focus:border-[#14B8A6] transition-all duration-300"
                     />
                   </motion.div>
-                  <motion.div
-                    className="space-y-2"
-                    whileFocus={{ scale: 1.02 }}
-                  >
-                    <Label htmlFor="lastName">Last Name</Label>
+
+                  <motion.div className="space-y-2" whileFocus={{ scale: 1.02 }}>
+                    <Label htmlFor="subject">Subject</Label>
                     <Input
-                      id="lastName"
-                      placeholder="Doe"
+                      id="subject"
+                      name="subject"
+                      placeholder="Project Discussion"
+                      required
                       className="bg-gray-700/50 border-gray-600 focus:border-[#14B8A6] transition-all duration-300"
                     />
                   </motion.div>
-                </div>
 
-                <motion.div className="space-y-2" whileFocus={{ scale: 1.02 }}>
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="john@example.com"
-                    className="bg-gray-700/50 border-gray-600 focus:border-[#14B8A6] transition-all duration-300"
-                  />
-                </motion.div>
+                  <motion.div className="space-y-2" whileFocus={{ scale: 1.02 }}>
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell me about your project..."
+                      rows={6}
+                      required
+                      className="bg-gray-700/50 border-gray-600 focus:border-[#14B8A6] resize-none transition-all duration-300"
+                    />
+                  </motion.div>
 
-                <motion.div className="space-y-2" whileFocus={{ scale: 1.02 }}>
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input
-                    id="subject"
-                    placeholder="Project Discussion"
-                    className="bg-gray-700/50 border-gray-600 focus:border-[#14B8A6] transition-all duration-300"
-                  />
-                </motion.div>
+                  {/* Success/Error Message */}
+                  {message.text && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className={`flex items-center space-x-2 p-3 rounded-lg ${
+                        message.type === 'success' 
+                          ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
+                          : 'bg-red-500/20 text-red-400 border border-red-500/30'
+                      }`}
+                    >
+                      {message.type === 'success' ? (
+                        <CheckCircle className="h-5 w-5" />
+                      ) : (
+                        <AlertCircle className="h-5 w-5" />
+                      )}
+                      <span className="text-sm">{message.text}</span>
+                    </motion.div>
+                  )}
 
-                <motion.div className="space-y-2" whileFocus={{ scale: 1.02 }}>
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell me about your project..."
-                    rows={6}
-                    className="bg-gray-700/50 border-gray-600 focus:border-[#14B8A6] resize-none transition-all duration-300"
-                  />
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <Button className="w-full bg-[#14B8A6] hover:bg-[#2041df] text-white py-3 rounded-2xl font-semibold transition-all duration-300">
-                    Send Message
-                    <Send className="ml-2 h-5 w-5" />
-                  </Button>
-                </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <Button 
+                      type="submit"
+                      disabled={isLoading}
+                      className="w-full bg-[#14B8A6] hover:bg-[#2041df] text-white py-3 rounded-2xl font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isLoading ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <Send className="ml-2 h-5 w-5" />
+                        </>
+                      )}
+                    </Button>
+                  </motion.div>
+                </form>
               </CardContent>
             </Card>
           </motion.div>
