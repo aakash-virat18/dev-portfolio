@@ -43,7 +43,7 @@ export function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 w-full z-50 bg-[#1e1e1e]/90 backdrop-blur-md border-b border-gray-800"
+      className="fixed top-0 w-full z-[100] bg-[#1e1e1e]/90 backdrop-blur-md border-b border-gray-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center items-center h-16">
@@ -62,13 +62,14 @@ export function Navbar() {
           </div>
 
           {/* Mobile Navigation */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="bg-[#1e1e1e] border-gray-800">
+          <div className="md:hidden absolute right-4">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+            <SheetContent side="right" className="bg-[#1e1e1e] border-gray-800 z-[101]">
               <div className="flex flex-col space-y-4 mt-8">
                 {navItems.map((item) => (
                   <button
@@ -85,7 +86,8 @@ export function Navbar() {
                 ))}
               </div>
             </SheetContent>
-          </Sheet>
+            </Sheet>
+          </div>
         </div>
       </div>
     </motion.nav>

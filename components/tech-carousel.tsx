@@ -24,7 +24,7 @@ const techStack = [
 
 export function TechCarousel() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden mb-10 sm:mb-0">
       <motion.div
         className="flex space-x-8"
         animate={{

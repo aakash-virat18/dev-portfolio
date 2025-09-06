@@ -25,7 +25,7 @@ const pageTransition = {
 export default function HomePage() {
   return (
     <motion.main 
-      className="min-h-screen bg-[#1e1e1e] text-[#e5e5e5]"
+      className="min-h-screen bg-[#1e1e1e] text-[#e5e5e5] overflow-x-hidden"
       initial="initial"
       animate="in"
       exit="out"
